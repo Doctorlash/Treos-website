@@ -1,0 +1,117 @@
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+}
+
+/* Main content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Headline section */
+.headline {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  color: #fff;
+}
+
+.headline h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.headline p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Services overview section */
+.services-overview {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.services-overview h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: 2rem;
+}
+
+.services-overview ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  margin-bottom: 3rem;
+}
+
+.services-overview li {
+  padding: 1.5rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.services-overview li:hover {
+  transform: translateY(-5px);
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+  
+  .headline {
+    padding: 2rem 1rem;
+  }
+  
+  .services-overview {
+    padding: 2rem 1rem;
+  }
+  
+  .services-overview ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline h1 {
+    font-size: 1.8rem;
+  }
+  
+  .headline p {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+  }
+}
